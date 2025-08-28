@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Intelligent sensor network for controlling an irrigation system</title>
+    <link rel="stylesheet" href="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\css\styles.css">
+  </head>
+  <body>
+    <h2>Intelligent sensor network for controlling an irrigation system</h2>
+    <h3>Description</h3>
+    <p>
+      The objective of the project was to develop intelligent algorithms through
+      which we can trigger an irrigation system according to the environmental
+      parameters measured with help of an intelligent wireless sensors network.
+      I created a system consisting of a sensor node, a base station and an actuator node.
+      The sensor node is based on Arduino MKR WAN 1310 development board with LoRa
+      communication protocol, capacitive sensor to measure soil moisture, waterproof
+      temperature sensor, which I use to measure soil temperature and temperature
+      and humidity sensor (DHT22/AM2302), used to determine the temperature and
+      humidity of the air. The base station is based on Arduino MKR WAN 1310
+      development board with LoRa communication protocol and an OLED display
+      which it was used to display parameters measured by sensor node. The actuator
+      sensor is based on Arduino MKR WAN 1310 development board with LoRa communication
+      protocol, MKR Relay Shield that can be used for loads up to 24V and a mini
+      submersible water pump. With the help of the sensor node, the data from the
+      sensors are read, which are transmitted to the base station where there are
+      shown on the display. The data from the sensor node is transmitted to the
+      actuator node at the same time. The algorithm used for the actuator node
+      processes the data from the sensors and triggers the pump depending on the
+      soil moisture, its temperature, but also the temperature and humidity of
+      the air in the vicinity of the plant.
+  </p>
+  <h3>Components</h3>
+  <ol>
+    <li>
+      <h4>Sensor node</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Arduino MKR WAN 1310</th>
+            <th>Antenna</th>
+            <th>Capacitive soil moisture sensor v1.2</th>
+            <th>Soil temperature sensor DS18B20</th>
+            <th>Humidity and temperature sensor DHT22/AM2302B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\arduino-img.JPG" alt="arduino.img"> </td>
+            <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\antenna.JPG" alt="antenna.img"> </td>
+            <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\capacitive-soil-moisture-sensor.JPG" alt="soil-moisture-sensor.img"></td>
+            <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\soil-temperature-sensor.JPG" alt="soil-temperature-sensor.img"></td>
+            <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\humidity-&-temperature-sensor.JPG" alt="h&t-sensor.img"></td>
+          </tr>
+        </tbody>
+      </table>
+      <p><h4>Sensor node circuit</h4></p>
+      <table>
+        <td><img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\sensor-node-circuit.JPG" alt="sensor-node-circuit.img"></td>
+        <td><img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\sensor-node.JPG" alt="sensor-node.img"></td>
+      </table>
+    </li>
+    <li>
+      <h4>Base station</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Arduino MKR WAN 1310</th>
+            <th>Antenna</th>
+            <th>Display OLED 128x64 – 0.96 I2C</th>
+          </tr>
+        </thead>
+        <tbody>
+          <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\arduino-img.JPG" alt="arduino.img"> </td>
+          <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\antenna.JPG" alt="antenna.img"> </td>
+          <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\display.JPG" alt="display.img"> </td>
+        </tbody>
+      </table>
+      <p><h4>Base station circuit</h4></p>
+      <table>
+        <td><img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\base-station-circuit.JPG" alt="base-station-circuit.img"></td>
+        <td><img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\base-station.JPG" alt="base-station.img"></td>
+      </table>
+    </li>
+    <li>
+      <h4>Actuator node</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Arduino MKR WAN 1310</th>
+            <th>Antenna</th>
+            <th>Arduino MKR Relay Shield</th>
+            <th>Submersible pump 3-6V</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\arduino-img.JPG" alt="arduino.img"> </td>
+            <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\antenna.JPG" alt="antenna.img"> </td>
+            <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\arduino-MKR-relay.JPG" alt="arduino-MKR-relay.img"> </td>
+            <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\pump.JPG" alt="pump.img"> </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><h4>Actuator node circuit</h4></p>
+      <table>
+        <td><img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\actuator-node-circuit.JPG" alt="actuator-node-circuit.img"></td>
+        <td><img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\actuator-node.JPG" alt="actuator-node.img"></td>
+      </table>
+    </li>
+  </ol>
+  <h3>Results</h3>
+  <ol>
+    <li><h4></h4></li>
+    <table>
+      <tr>
+        <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\sensor-node-I.JPG" alt="sensor-node-I.img"></td>
+        <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\actuator-node-I.JPG" alt="actuator-node-I.img"></td>
+      </tr>
+      <tr>
+        <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\base-station-a-I.JPG" alt="base-station-a-I.img"></td>
+        <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\base-station-b-I.JPG" alt="base-station-b-I.img"> </td>
+      </tr>
+    </table>
+    <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\records-I.JPG" alt="records-I.img">
+      <li><h4></h4></li>
+      <table>
+        <tr>
+          <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\sensor-node-I.JPG" alt="sensor-node-I.img"></td>
+          <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\actuator-node-I.JPG" alt="actuator-node-I.img"></td>
+        </tr>
+        <tr>
+          <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\base-station-a-I.JPG" alt="base-station-a-I.img"></td>
+          <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\base-station-b-I.JPG" alt="base-station-b-I.img"> </td>
+        </tr>
+    </table>
+    <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\records-I.JPG" alt="records-II.img">
+    <li><h4></h4></li>
+    <table>
+      <tr>
+        <td><img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\sensor-node-a-III.JPG" alt="node-sensor-a-III.img"></td>
+        <td><img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\sensor-node-b-III.JPG" alt="node-sensor-b-III.img"></td>
+      </tr>
+      <tr>
+        <td> <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\base-station-III.JPG" alt="base-station-III.img"> </td>
+      </tr>
+    </table>
+    <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\recors-III.JPG" alt="records-III.img">
+  </ol>
+  </body>
+</html>
