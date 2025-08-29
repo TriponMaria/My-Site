@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Motion control of a robot based on EEG signals</title>
-    <link rel="stylesheet" href="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\css\styles.css">
-  </head>
-  <body>
-    <h2>Motion control of a robot based on EEG signals</h2>
+    <link rel="stylesheet" href="..\css\styles.css">
+</head>
+<body>
+<h2>Motion control of a robot based on EEG signals</h2>
+<div class="project">
     <h3>Description</h3>
     <p>I developed an algorithm in Matlab that uses an online database from BCI
-      Competition III (Data set IVa - motor imagery, small training sets).
-      The developed algorithm is labeled mainly in three stages: filtering,
-      feature extraction and classification.</p>
+        Competition III (Data set IVa - motor imagery, small training sets).
+        The developed algorithm is labeled mainly in three stages: filtering,
+        feature extraction and classification.</p>
     <h3>Results</h3>
     <ol>
-      <li><h3>LV (Log variance)</h3></li>
-      <p>From the 118 channels we extracted the signal from channel C3,
-        then filtered it with the help of the butterworth filter of order 5 bandpass,
-        between 8-30 Hz. The 8-30Hz interval includes the μ band and the β band.
-        I divided the filtered signal into signal segments corresponding to class
-        1 of movements, the right hand, and class 2 of movements, the right leg.
-        From each segment separately, I extracted the μ band with the help of a
-        butterworth filter of order 5 band-pass, 8 -12Hz. Likewise, also with the
-        help of a butterworth filter of the 5th order, this time between 15-30 Hz,
-        we also obtained the β band from each segment. Then we extracted the LV
-        from both the μ band of each segment and the α band of each segment.
-        Finally we obtained 2 sets of features, one for the μ band and one for
-        the β band, which we used for classification.</p>
+        <li><h3>LV (Log variance)</h3></li>
         <br>
-        <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\118-channels.JPG" alt="118-channels.img">
+        <p class="results-description">From the 118 channels we extracted the signal from channel C3,
+            then filtered it with the help of the butterworth filter of order 5 bandpass,
+            between 8-30 Hz. The 8-30Hz interval includes the μ band and the β band.
+            I divided the filtered signal into signal segments corresponding to class
+            1 of movements, the right hand, and class 2 of movements, the right leg.
+            From each segment separately, I extracted the μ band with the help of a
+            butterworth filter of order 5 band-pass, 8 -12Hz. Likewise, also with the
+            help of a butterworth filter of the 5th order, this time between 15-30 Hz,
+            we also obtained the β band from each segment. Then we extracted the LV
+            from both the μ band of each segment and the α band of each segment.
+            Finally we obtained 2 sets of features, one for the μ band and one for
+            the β band, which we used for classification.</p>
+        <br>
+        <img src="..\images\118-channels.JPG" alt="118-channels.img">
         <p>In the figure below I represented the signal from the unprocessed C3
-          channel and then the signal from the C3 channel to which I applied the
-          fifth order Butterworth filter between 8-30 Hz, thus including the alpha
-          and beta bands.</p>
-        <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\LV-f1.JPG" alt="LV-f1.img">
+            channel and then the signal from the C3 channel to which I applied the
+            fifth order Butterworth filter between 8-30 Hz, thus including the alpha
+            and beta bands.</p>
+        <img src="..\images\LV-f1.JPG" alt="LV-f1.img" width="80%">
         <p>In the figure below I have represented the signal extracted from the
-          C3 channel, filtered after preprocessing, divided into signal segments
-          corresponding to class 1 and class 2 movements, respectively.</p>
-        <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\LV-f2.JPG" alt="LV-f2.img">
+            C3 channel, filtered after preprocessing, divided into signal segments
+            corresponding to class 1 and class 2 movements, respectively.</p>
+        <img src="..\images\LV-f2.JPG" alt="LV-f2.img" width="80%">
         <p>Frequency band µ of a signal segment corresponding to class 1</p>
-        <img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\LV-f3.JPG" alt="LV-f3.img">
+        <img src="..\images\LV-f3.JPG" alt="LV-f3.img" width="80%" >
         <li><h3>Root mean square(RMS)</h3></li>
-        <p>For the RMS calculation, the signal extracted from the C3 channel was
-          filtered with the butterworth filter of the 5th order bandpass between
-          0.5-30 Hz so that after the wavelet decomposition the µ, β, θ bands are
-          isolated. The filtered signal was divided into segments for class 1,
-          the right hand, and for class 2, the right leg. RMS was calculated for
-          3 levels of wavelet decomposition applied to each segment. We used the
-          Daubechies wavelet family, this being considered by specialists to be
-          the best method that can be used within of EEG signal processing for a
-          BCI system. In this paper, we decomposed each segment into 3 levels,
-          thus obtaining 3 sets of features that were later classified.</p>
+        <br>
+        <p class="results-description">For the RMS calculation, the signal extracted from the C3 channel was
+            filtered with the butterworth filter of the 5th order bandpass between
+            0.5-30 Hz so that after the wavelet decomposition the µ, β, θ bands are
+            isolated. The filtered signal was divided into segments for class 1,
+            the right hand, and for class 2, the right leg. RMS was calculated for
+            3 levels of wavelet decomposition applied to each segment. We used the
+            Daubechies wavelet family, this being considered by specialists to be
+            the best method that can be used within of EEG signal processing for a
+            BCI system. In this paper, we decomposed each segment into 3 levels,
+            thus obtaining 3 sets of features that were later classified.</p>
         <br>
         <p>We represented the three components resulting from the decomposition
-          that isolate three of the most important frequency bands specific
-          to EEG signals:</p>
-          <table>
+            that isolate three of the most important frequency bands specific
+            to EEG signals:</p>
+        <table>
             <thead>
-              <tr>
+            <tr>
                 <th>Class 1</th>
                 <th>Class 2</th>
-              </tr>
+            </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\RMS-f1.JPG" alt="RMS-f1.img"></td>
-                <td><img src="C:\Users\TRIPON MARIA\Desktop\Web Development\HTML - Personal Site\image\RMS-f2.JPG" alt="RMS-f2.img"></td>
-              </tr>
+            <tr>
+                <td><img src="..\images\RMS-f1.JPG" alt="RMS-f1.img" width="80%" ></td>
+                <td><img src="..\images\RMS-f2.JPG" alt="RMS-f2.img" width="80%"></td>
+            </tr>
             </tbody>
-          </table>
+        </table>
 
     </ol>
-  </body>
+</div>
+</body>
 </html>
