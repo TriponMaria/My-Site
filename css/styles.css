@@ -145,6 +145,11 @@ ol {
   text-align: justify;
   margin: 40px 100px 40px;
 }
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 .btn {
   background: #3498db;
@@ -191,3 +196,4 @@ ol {
   font-family: 'Montserrat', sans-serif;
   padding: 20px 0 0;
 }
+
