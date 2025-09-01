@@ -79,26 +79,7 @@ li {
   float: left;
   margin-right: 30px;
 }
-.matlab-image {
-  width: 20%;
-  float: left;
-  margin-left: 40px;
-}
-.sql-image {
-  width: 20%;
-  float: right;
-  margin-right: 2px;
-}
-.html-image {
-  width: 20%;
-  float: left;
-  margin-left: 40px;
-}
-.arduino-image {
-  width: 20%;
-  float: right;
-  margin-left: 40px;
-}
+
 .portofolio {
     width: 80%;
     margin:50px auto 100px auto;
@@ -141,10 +122,11 @@ li {
   margin: 40px 100px 40px;
 }
 ol {
-    float: left;
+  float: left;
   text-align: justify;
   margin: 40px 100px 40px;
 }
+
 .button-container {
   display: flex;
   flex-direction: column;
@@ -196,4 +178,3 @@ ol {
   font-family: 'Montserrat', sans-serif;
   padding: 20px 0 0;
 }
-
