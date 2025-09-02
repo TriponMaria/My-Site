@@ -100,6 +100,7 @@ li {
   margin: 40px auto 60px;
 }
 .project-description {
+  width: 90%;
   float: left;
   text-align: justify;
   margin: 40px 100px 40px;
@@ -188,4 +189,5 @@ td {
   font-family: 'Montserrat', sans-serif;
   padding: 20px 0 0;
 }
+
 
