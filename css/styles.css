@@ -80,7 +80,7 @@ li {
   margin-right: 30px;
 }
 .skill-image {
-  width: 70%;
+  width: 50%;
   float: left;
   margin-right: 30px;
 }
@@ -188,3 +188,4 @@ td {
   font-family: 'Montserrat', sans-serif;
   padding: 20px 0 0;
 }
+
