@@ -59,7 +59,7 @@ li {
   height: 400px;
 }
 .middle-container {
-  margin: 100px 0;
+  margin: 100px 40px;
 }
 .me {
   width: 200px;
@@ -70,12 +70,22 @@ li {
 }
 .skill-row {
   width: 45%;
-  margin:50px auto 250px auto;
+  margin:40px auto 150px ;
   text-align: left;
   flex-wrap: wrap;
 }
 .python-image {
   width: 30%;
+  float: left;
+  margin-right: 30px;
+}
+.skill-image {
+  width: 70%;
+  float: left;
+  margin-right: 30px;
+}
+.component-image {
+  width: 50%;
   float: left;
   margin-right: 30px;
 }
@@ -108,31 +118,31 @@ li {
   margin: 40px 9px 40px;
 }
 
-
 .result-description {
   float: left;
   text-align: justify;
   width: 1000px;
   margin: 10px;
 }
-
-.components  {
-  float: left;
-  text-align: justify;
-  margin: 40px 100px 40px;
-}
 ol {
   float: left;
   text-align: justify;
   margin: 40px 100px 40px;
 }
+th {
+  text-align: centre;
+  margin: 10px 200px ;
+}
+
 
 .button-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
+td {
+    margin: auto 20px;
+}
 .btn {
   background: #3498db;
   background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
